@@ -3,18 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web visitors - Demo </title>
+  <title>Pipedrive Web Visitors — Demo Environment</title>
   
-<script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('lAxoEaK0ME18OYGd'); </script>
-  
+  <!-- Pipedrive Web Visitors Tracker Script -->
+  <script> 
+    (function(ss,ex){ 
+      window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; 
+      (function(d,s){ 
+        fs=d.getElementsByTagName(s)[0]; 
+        function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; 
+        ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); 
+      })(document,'script'); 
+    })('lAxoEaK0ME18OYGd'); 
+  </script>
+
+  <style>
+    :root {
+      --pd-dark: #222b36;
+      --pd-green: #268241;
+      --pd-green-hover: #1e6934;
+      --pd-bg: #f4f5f6;
+      --pd-border: #e3e5e8;
+      --pd-text: #222b36;
+      --pd-subtext: #596168;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--pd-bg);
+      color: var(--pd-text);
+      line-height: 1.5;
+    }
+
+    .demo-bar {
+      background-color: var(--pd-dark);
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .demo-badge {
+      background-color: var(--pd-green);
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--pd-border);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--pd-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      width: 14px;
+      height: 14px;
+      background-color: var(--pd-green);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--pd-subtext);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--pd-green); }
+
+    .hero {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--pd-border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      color: var(--pd-dark);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--pd-subtext);
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: var(--pd-green);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background-color: var(--pd-green-hover); }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid var(--pd-border);
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--pd-dark);
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--pd-subtext);
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 40px; line-height: 1.6;">
-  <h1>Welcome to Acme Corp</h1>
-  <p>This is a test environment for demonstrating web visitor identification and lead tracking.</p>
-  <ul>
-    <li><a href="#services">Our Services</a></li>
-    <li><a href="#pricing">Pricing Plans</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-  </ul>
+<body>
+
+  <!-- Top Banner clarifying this is a test site -->
+  <div class="demo-bar">
+    <span class="demo-badge">Demo Mode</span>
+    <span>Pipedrive Web Visitors Test Environment &bull; Tracking Script Active</span>
+  </div>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon"></span> DemoCorp
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact Sales</a>
+    </nav>
+  </header>
+
+  <!-- Hero Content -->
+  <div class="hero">
+    <h1>Web Visitors Tracking Landing Page</h1>
+    <p>This dummy website is designed to generate traffic activity for live Pipedrive CRM demonstrations.</p>
+    <a href="#contact" class="btn">Simulate Lead Conversion</a>
+  </div>
+
+  <!-- Dummy Feature Cards -->
+  <div class="features" id="features">
+    <div class="card">
+      <h3>1. Visit Page</h3>
+      <p>Simulates standard browsing behavior from potential B2B buyers.</p>
+    </div>
+    <div class="card">
+      <h3>2. Script Detection</h3>
+      <p>The Leadfeeder script captures visitor IP details in real time.</p>
+    </div>
+    <div class="card">
+      <h3>3. Push to CRM</h3>
+      <p>Identified companies are automatically matched inside Pipedrive.</p>
+    </div>
+  </div>
+
 </body>
 </html>
